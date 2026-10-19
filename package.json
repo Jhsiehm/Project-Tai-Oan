@@ -1,0 +1,38 @@
+{
+  "name": "taiwan-opera-map",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Tâi-oân: A History in Acts. An educational, non-commercial time-slider map of Taiwan's history staged like Taiwanese opera.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate:data && tsc -b && vite build",
+    "build:review": "npm run validate:data && tsc -b && vite build --mode review",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "npm run validate:data && npm run check:style && npm run typecheck",
+    "geo:outline": "node scripts/build-outline.mjs",
+    "check:style": "node scripts/check-style.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "ajv": "^8.20.0",
+    "topojson-client": "^3.1.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "world-atlas": "^2.0.2"
+  }
+}
