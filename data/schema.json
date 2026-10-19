@@ -24,6 +24,8 @@
       "description": "GeoJSON Point/LineString/Polygon; null if not yet mapped",
       "properties": { "type": { "enum": ["Point", "LineString", "Polygon", "MultiPolygon"] }, "coordinates": {} }
     },
+    "geometry_note": { "type": "string", "description": "How the geometry was drawn and how far to trust it (schematic, approximate). Shown on the card." },
+    "set_piece": { "enum": ["rail", "canal", "mill", "marker", "territory"], "description": "Rendering hint: which stage set piece draws this record's geometry" },
     "certainty": { "enum": ["documented", "estimated", "disputed"] },
     "confidence": { "enum": ["verified", "partly-verified", "unverified"] },
     "status": { "enum": ["draft", "reviewed", "published"] },
